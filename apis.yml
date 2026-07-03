@@ -1,0 +1,54 @@
+aid: brightwheel
+url: https://raw.githubusercontent.com/api-evangelist/brightwheel/refs/heads/main/apis.yml
+name: Brightwheel
+kind: company
+description: Brightwheel (mybrightwheel.com) is an all-in-one childcare and early
+  education management platform used by childcare centers, preschools, and
+  early-learning programs to run daily operations - attendance and check-in,
+  digital daily sheets, tuition billing and payments, enrollment and admissions,
+  staff/timecards, classroom (room) management, learning assessments, and
+  real-time parent messaging and photo/video sharing. As of this catalog entry,
+  Brightwheel does NOT publish a documented, self-serve public or partner
+  developer API. There is no developer portal, API reference, API key signup,
+  OpenAPI specification, or webhook documentation. The only Brightwheel API
+  activity that is publicly acknowledged is bespoke, contract-scoped work built
+  for individual government partners - for example a private API implemented to
+  submit attendance and subsidy data to Iowa's childcare subsidy data system -
+  and inbound integrations where Brightwheel pushes data into third-party
+  products (e.g. staff timecards to Gusto for payroll). None of these expose a
+  documented API surface that outside developers can build against. This entry
+  is therefore an honest stub documenting the provider and its access model; no
+  API definitions are asserted because none are publicly documented.
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- Childcare
+- Early Education
+- Preschool
+- Childcare Management
+- Attendance
+- Billing
+- Payments
+- Parent Communication
+- EdTech
+- No Public API
+created: '2026-07-03'
+modified: '2026-07-03'
+specificationVersion: '0.19'
+common:
+- type: Website
+  url: https://mybrightwheel.com
+- type: SignUp
+  url: https://schools.mybrightwheel.com
+- type: LinkedIn
+  url: https://www.linkedin.com/company/brightwheel
+- type: GitHubOrganization
+  url: https://github.com/brightwheel
+- type: Documentation
+  url: https://help.mybrightwheel.com/en/
+- type: Pricing
+  url: https://mybrightwheel.com/pricing/
+- type: GovernmentPartners
+  url: https://mybrightwheel.com/government-and-network-partners/
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

@@ -1,0 +1,93 @@
+aid: brightwheel
+name: Brightwheel
+review:
+  question: Does Brightwheel expose a documented public WebSocket API?
+  answer: false
+  date: '2026-07-03'
+  reviewer: API Evangelist
+  asyncapiSpecCreated: false
+  asyncapiScopeNote: |
+    No AsyncAPI document was authored. Brightwheel does not publish any
+    documented public developer API - REST or otherwise - so there is no
+    server-push transport (WebSocket or SSE) on a Brightwheel API to model.
+    The Brightwheel mobile and web apps deliver real-time parent updates
+    (daily activity feed, check-in notifications, messaging) to end users, but
+    that realtime behavior runs over Brightwheel's own private, undocumented
+    application backend and is not offered as a developer-consumable API. There
+    is no public interface (WebSocket, SSE, or REST) to describe with AsyncAPI.
+findings:
+  summary: |
+    Brightwheel does not publish a documented public WebSocket API - and, more
+    broadly, does not publish a documented public or self-serve partner
+    developer API of any kind. Brightwheel is a childcare / early-education
+    management platform (attendance and check-in, digital daily sheets, tuition
+    billing and payments, enrollment, staff timecards, room management, learning
+    assessments, and parent messaging). As of the review date there is no
+    developer portal, no API reference, no API key or OAuth client signup, no
+    published OpenAPI/Swagger specification, and no webhook documentation on
+    mybrightwheel.com or in the Brightwheel Help Center. The only publicly
+    acknowledged Brightwheel API work is bespoke and contract-scoped: a private
+    API built for a specific government partner (Iowa's childcare subsidy data
+    system) to submit attendance/subsidy data, plus inbound integrations where
+    Brightwheel pushes data into third-party SaaS (for example staff timecards
+    to Gusto for payroll). None of these expose a documented, general-purpose
+    API surface an outside developer could build against. No WebSocket (ws:// or
+    wss://) endpoint is documented anywhere.
+  openSource: |
+    Brightwheel is a proprietary, closed-source commercial SaaS. The company
+    maintains a GitHub organization (github.com/brightwheel), but its public
+    repositories are forks of third-party libraries and tooling (Android UI
+    libraries, Ruby/Docker tooling, various MCP servers) - there is no
+    first-party Brightwheel API client, SDK, or OpenAPI specification published
+    there. Third-party, unofficial community projects referencing a
+    "brightwheel-api" exist on GitHub but are not official and are not backed by
+    documented endpoints.
+  transports:
+    - protocol: REST
+      scheme: https
+      documented: false
+      note: No public REST API is documented. Brightwheel's apps use a private, undocumented backend.
+    - protocol: WebSocket
+      scheme: wss
+      documented: false
+      note: No WebSocket endpoint is documented anywhere in Brightwheel's public materials as of the review date.
+    - protocol: Webhook
+      scheme: https
+      documented: false
+      note: No outbound webhook / event subscription API is documented for third-party developers.
+  accessModel: |
+    Access to Brightwheel is via the web app (schools.mybrightwheel.com) and the
+    iOS/Android mobile apps for administrators, teachers, and parents. Data
+    integrations are handled by Brightwheel directly on a case-by-case,
+    contract-scoped basis - primarily government/network subsidy programs and a
+    small set of named third-party product integrations (e.g. Gusto payroll,
+    Birdeye reviews, airSlate SignNow e-signature) - rather than through an open,
+    documented, developer-accessible API.
+  endpointsModeled: none
+  endpointsConfirmedRest: []
+sources:
+  - url: https://mybrightwheel.com/
+    type: Website
+    note: Product overview - childcare management platform; no developer/API link in navigation.
+  - url: https://help.mybrightwheel.com/en/
+    type: Documentation
+    note: Help Center homepage. No mention of a public API, API keys, webhooks, or developer docs.
+  - url: https://mybrightwheel.com/government-and-network-partners/
+    type: Website
+    note: References a bespoke API built for Iowa's childcare subsidy data system - a contract deliverable, not a documented public API.
+  - url: https://mybrightwheel.com/pricing/
+    type: Pricing
+    note: Custom / quote-based pricing per center; no published API plan or developer tier.
+  - url: https://github.com/brightwheel
+    type: SourceCode
+    note: Brightwheel GitHub org - only third-party forks; no first-party API client, SDK, or OpenAPI spec.
+actions:
+  asyncapiPath: null
+  apisYmlUpdated: true
+  reason: |
+    No WebSocket protocol surface exists, and Brightwheel exposes no documented
+    public developer API of any kind. The apis.yml was written as an honest stub
+    that documents the provider, its access model, and its lack of a public API,
+    without asserting any API definitions. No AsyncAPI document was created
+    because there is no documented public transport (WebSocket, SSE, or REST) on
+    a Brightwheel API to model.
