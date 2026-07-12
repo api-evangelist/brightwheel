@@ -35,6 +35,8 @@ created: '2026-07-03'
 modified: '2026-07-03'
 specificationVersion: '0.19'
 common:
+- type: DomainSecurity
+  url: security/brightwheel-domain-security.yml
 - type: Website
   url: https://mybrightwheel.com
 - type: SignUp
