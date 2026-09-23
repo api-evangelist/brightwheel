@@ -1,0 +1,26 @@
+# Front Door AI Index — brightwheel — 2026-09-17
+# AI vocabulary counted on the provider's root page. Generated; do not edit.
+# `score` is null unless ownership is `own` — see front_door_ai.py.
+front_door_ai:
+  slug: brightwheel
+  lexicon_version: '1.0'
+  probed_at: '2026-09-17'
+  host: mybrightwheel.com
+  final_host: mybrightwheel.com
+  ownership: own
+  owner: brightwheel
+  shares_host_with: null
+  inherited_from: null
+  verdict: scored
+  score: 4
+  host_score: 4
+  density: 0.87
+  words: 4597
+  tiers:
+    agentic: 1
+    core: 3
+    model: 0
+  ambiguous: 0
+  top_terms:
+    AI: 3
+    AI assistant: 1
