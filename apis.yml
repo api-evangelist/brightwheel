@@ -65,9 +65,13 @@ tags_raw:
 - EdTech
 - No Public API
 created: '2026-07-03'
-modified: '2026-07-03'
+modified: '2026-10-06'
 specificationVersion: '0.23'
 common:
+- url: https://mybrightwheel.com/blog
+  type: Blog
+- url: https://mybrightwheel.com/blog/rss.xml
+  type: BlogRSS
 - type: DomainSecurity
   url: security/brightwheel-domain-security.yml
 - type: Website
