@@ -1,4 +1,4 @@
-# Brightwheel (brightwheel)
+# Brightwheel
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,68 +64,84 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Brightwheel ([mybrightwheel.com](https://mybrightwheel.com)) is an all-in-one childcare and early-education management platform used by childcare centers, preschools, and early-learning programs. It combines attendance and check-in, digital daily sheets, tuition billing and payments, enrollment and admissions, staff timecards, classroom (room) management, learning assessments, and real-time parent messaging with photo/video sharing.
+Brightwheel (mybrightwheel.com) is an all-in-one childcare and early education management platform used by childcare centers, preschools, and early-learning programs to run daily operations - attendance and check-in, digital daily sheets, tuition billing and payments, enrollment and admissions, staff/timecards, classroom (room) management, learning assessments, and real-time parent messaging and photo/video sharing. As of this catalog entry, Brightwheel does NOT publish a documented, self-serve public or partner developer API. There is no developer portal, API reference, API key signup, OpenAPI specification, or webhook documentation. The only Brightwheel API activity that is publicly acknowledged is bespoke, contract-scoped work built for individual government partners - for example a private API implemented to submit attendance and subsidy data to Iowa's childcare subsidy data system - and inbound integrations where Brightwheel pushes data into third-party products (e.g. staff timecards to Gusto for payroll). None of these expose a documented API surface that outside developers can build against. This entry is therefore an honest stub documenting the provider and its access model; no API definitions are asserted because none are publicly documented.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/brightwheel/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/brightwheel/refs/heads/main/apis.yml)
+**Areas:** Childcare · Early Education · Preschool · Child Care Management · Attendance · Billing · Payments · Parent Communication · EdTech
 
-## API Access Model — No Public Developer API
+## Brightwheel on APIs.io
 
-> **Honest status:** As of this catalog entry (2026-07-03), Brightwheel does **not** publish a documented, self-serve public or partner developer API. This entry is an intentional stub. No API definitions, OpenAPI specs, plans, rate limits, or FinOps files are asserted, because none are publicly documented.
+Everything profiled for Brightwheel is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/brightwheel/](https://apis.io/providers/brightwheel/)** — or go straight to one of the APIs or properties below.
 
-What the research confirmed:
+### Published properties
 
-- **No developer portal, no API reference, no API key or OAuth signup, no published OpenAPI/Swagger specification, and no webhook documentation** on mybrightwheel.com or in the [Brightwheel Help Center](https://help.mybrightwheel.com/en/).
-- The only publicly acknowledged Brightwheel API work is **bespoke and contract-scoped**: a private API built for a specific government partner — **Iowa's childcare subsidy data system** — to submit attendance and subsidy data. This is a contract deliverable, not a documented public API. See [Government & Network Partners](https://mybrightwheel.com/government-and-network-partners/).
-- Brightwheel also participates in **inbound integrations** where it pushes data into third-party SaaS — for example staff timecards to **Gusto** for payroll, and integrations with Birdeye (reviews) and airSlate SignNow (e-signature). These are partner-side integrations; they do not expose a Brightwheel API surface that outside developers can build against.
-- The [Brightwheel GitHub organization](https://github.com/brightwheel) contains only third-party forks (Android UI libraries, Ruby/Docker tooling, MCP servers). There is **no first-party Brightwheel API client, SDK, or OpenAPI specification** published. Unofficial community `brightwheel-api` projects exist but are not official and are not backed by documented endpoints.
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-If you need to integrate with Brightwheel, the practical paths today are: (1) use the web app ([schools.mybrightwheel.com](https://schools.mybrightwheel.com)) and mobile apps, (2) rely on Brightwheel's pre-built third-party integrations, or (3) engage Brightwheel directly for a contract-scoped data integration (primarily available to government/network subsidy programs).
+#### Security (1)
 
-## Logical Product Areas (not documented APIs)
+Authentication, trust centre, and vulnerability disclosure.
 
-For reference only — these are the functional areas a Brightwheel API *would* cover if one were published. **No endpoints are documented or modeled here** (`endpointsModeled: none`):
+- [Brightwheel Domain Security](https://apis.io/security/brightwheel/brightwheel-domain-security/)
 
-- **Students / Children** — child profiles, enrollment, admissions
-- **Attendance / Check-in** — check-in/out, digital daily sheets
-- **Billing / Payments** — tuition plans, invoices, online bill pay
-- **Staff** — teacher/admin profiles, timecards
-- **Rooms** — classroom/room assignments and ratios
-- **Parent Messaging** — real-time activity feed, messaging, photo/video sharing
-- **Assessments** — learning/development assessments and reporting
+## Where to find this API
 
-## Tags
-
-- Childcare
-- Early Education
-- Preschool
-- Childcare Management
-- Attendance
-- Billing
-- Payments
-- Parent Communication
-- EdTech
-- No Public API
-
-## Timestamps
-
-- **Created:** 2026-07-03
-- **Modified:** 2026-07-03
-
-## Pricing
-
-Brightwheel does not publish prices publicly; pricing is **custom / quote-based per center**, typically reported in the range of roughly $3–$10 per child per month depending on tier and features, plus payment-processing fees on billing. There is no published API plan or developer tier. See [Brightwheel pricing](https://mybrightwheel.com/pricing/). No `plans/` file is included in this entry because there is no documented, sourced API pricing to model.
-
-## Common Properties
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://mybrightwheel.com)
-- [Sign Up / Login](https://schools.mybrightwheel.com)
-- [LinkedIn](https://www.linkedin.com/company/brightwheel)
-- [GitHub Organization](https://github.com/brightwheel)
-- [Documentation (Help Center)](https://help.mybrightwheel.com/en/)
+- [Documentation](https://help.mybrightwheel.com/en/)
 - [Pricing](https://mybrightwheel.com/pricing/)
-- [Government & Network Partners](https://mybrightwheel.com/government-and-network-partners/)
+- [Sign up](https://schools.mybrightwheel.com)
+- [Blog](https://mybrightwheel.com/blog)
+- [GitHub](https://github.com/brightwheel)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 7.8** — minimal · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 48.2 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 11.9 |
+| Access clarity | 10.5 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 5.9** — Education & Research
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/brightwheel/](https://apis.io/providers/brightwheel/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Brightwheel: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/brightwheel/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
